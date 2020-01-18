@@ -34,4 +34,16 @@ def count_calls(path, module_name): #zliczanie odwołań dla krawędzi
     with open(path, 'r') as f: 
         calls = re.findall(pattern, f.read()) 
         return len(calls) 
+    
 
+def find_edges_in_file(file, g): #Tomek i Szymon
+    with open(file, 'r') as fr:
+        for line in fr: #iteruje po liniach
+            if ("import" in line):
+                tab = line.split()
+                print(tab)
+                g.add_edge(
+                    extract_filename(file)+str(get_file_size(file)),
+                    tab[1]+str(get_file_size(tab[1])),
+                    weight=count_calls(file,tab[1])
+                )
