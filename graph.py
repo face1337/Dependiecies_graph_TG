@@ -47,3 +47,10 @@ def find_edges_in_file(file, g): #Tomek i Szymon
                     tab[1]+str(get_file_size(tab[1])),
                     weight=count_calls(file,tab[1])
                 )
+                
+def drawGraph(graph):  #Dominik
+    edge_labels = nx.get_edge_attributes(g, "weight")
+    pos = nx.spring_layout(g)
+    nx.draw(graph, pos=pos, with_labels=True, font_weight='bold')
+    nx.draw_networkx_edge_labels(g, pos=pos, edge_labels = edge_labels)
+    plt.show()
