@@ -36,7 +36,7 @@ def count_calls(path, module_name): #zliczanie odwołań dla krawędzi
         return len(calls) 
     
 
-def find_edges_in_file(file, g): #Tomek i Szymon
+def find_edges_in_file(file, g): 
     with open(file, 'r') as fr:
         for line in fr: #iteruje po liniach
             if ("import" in line):
