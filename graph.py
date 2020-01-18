@@ -28,3 +28,10 @@ def createGraph(path="./"):
         g.add_node(extract_filename(file_path)+str(get_file_size(file_path)))
         find_edges_in_file(file_path, g)
     return g
+
+def count_calls(path, module_name): #zliczanie odwołań dla krawędzi
+    pattern = re.compile(r'{}\.'.format(module_name)) 
+    with open(path, 'r') as f: 
+        calls = re.findall(pattern, f.read()) 
+        return len(calls) 
+
