@@ -22,4 +22,9 @@ def get_file_size(file_path):
 def createGraph(path="./"):
     g = nx.DiGraph()  # create direct graph
     files_to_parse = list(filter(lambda f: f.endswith(".py"), listdir(path))) # only python files
-    files_to_parse.pop(files_to_parse.index(current_file_name))  # without current file. Tomek
+    files_to_parse.pop(files_to_parse.index(current_file_name))  # without current file. 
+    
+     for file_path in files_to_parse:
+        g.add_node(extract_filename(file_path)+str(get_file_size(file_path)))
+        find_edges_in_file(file_path, g)
+    return g
