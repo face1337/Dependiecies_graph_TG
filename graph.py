@@ -18,3 +18,7 @@ def extract_filename(file):
 def get_file_size(file_path): 
     file_path = file_path if file_path.endswith('.py') else './'+file_path+'.py'
     return os.path.getsize(file_path)
+
+def createGraph(path="./"):
+    g = nx.DiGraph()  # create direct graph
+    files_to_parse = list(filter(lambda f: f.endswith(".py"), listdir(path))) # only python files
