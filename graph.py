@@ -55,5 +55,5 @@ def drawGraph(graph):  #Dominik
     nx.draw_networkx_edge_labels(g, pos=pos, edge_labels = edge_labels)
     plt.show()
 
-#g = createGraph()
-#drawGraph(g)
+g = createGraph()
+drawGraph(g)
