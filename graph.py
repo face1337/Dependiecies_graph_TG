@@ -8,7 +8,5 @@ from os import listdir
 import sys
 import re
 
-current_file_name = sys.argv[0].split('/')[-1] 
-
-full_file_names = {} 
+current_file_name = sys.argv[0].split('/')[-1]  #return current file name
 
