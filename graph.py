@@ -118,3 +118,9 @@ def count_call_1(path, func_name): #Tomek
 
 def get_node_name(path, name): #Patryk
     return name+" "+str(count_call_1(path,name))
+
+def count_method(path, names, othernames): #Dominik
+    count = 0
+    t = 0
+    str = 'def ' + names
+    f = open(path,"r")
