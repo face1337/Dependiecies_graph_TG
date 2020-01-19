@@ -73,7 +73,7 @@ def drawGraph_func(graph): #Dominik
 
     plt.show() 
 
-def createGraphFunctions(path="./HIS_II/"): #Tomek, Kamil, Wiktor, Szymon, Patryk
-    g = nx.DiGraph()  # create direct graph #Wiktor
+def createGraphFunctions(path="./HIS_II/"):
+    g = nx.DiGraph()  # create direct graph
     files_to_parse = rtrn_python_files(path)
     #files_to_parse.pop(files_to_parse.index(current_file_name))  # without current file
