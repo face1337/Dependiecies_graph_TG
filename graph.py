@@ -85,3 +85,14 @@ def createGraphFunctions(path="./HIS_II/"):
         funkcje += fs
         t_funkcje = fs
         for name in t_funkcje:
+
+            
+def get_function_names(path): #function names from file. Tomek
+   names = []
+   with open(path, 'r') as fr:
+       for line in fr:
+           if re.match(r"^\s*?def", line):
+               n = line.split(" ")[1].split("(")[0] 
+               names.append(n)
+   print(names)
+   return names
