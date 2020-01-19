@@ -85,6 +85,7 @@ def createGraphFunctions(path="./HIS_II/"):
         funkcje += fs
         t_funkcje = fs
         for name in t_funkcje:
+            g.add_node(get_node_name(path+"/"+plik,name))
 
             
 def get_function_names(path): #function names from file. Tomek
