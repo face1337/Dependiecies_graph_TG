@@ -115,3 +115,6 @@ def count_call_1(path, func_name): #Tomek
     with open(path, 'r') as f:
         calls = re.findall(pattern, f.read())
         return len(calls)
+
+def get_node_name(path, name): #Patryk
+    return name+" "+str(count_call_1(path,name))
