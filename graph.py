@@ -57,4 +57,5 @@ def drawGraph(graph):  #Dominik
 
 g = createGraph()
 drawGraph(g)
+
 # #### Historyjka nr2 ###########################
