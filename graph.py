@@ -93,6 +93,12 @@ def createGraphFunctions(path="./HIS_II/"):
             for othername in funkcje:
                 if name == othername:
                     continue
+                methodCount = count_method(path+"/"+plik, name, othername) 
+                if (methodCount > 0):
+                    name = get_node_name(path+"/"+plik, name)
+                    othername = get_node_name(path+"/"+plik, othername)
+                    g.add_edge(name, othername, weight=methodCount)
+    return g    
 
 def get_function_names(path): #function names from file. Tomek
    names = []
