@@ -77,3 +77,11 @@ def createGraphFunctions(path="./HIS_II/"):
     g = nx.DiGraph()  # create direct graph
     files_to_parse = rtrn_python_files(path)
     #files_to_parse.pop(files_to_parse.index(current_file_name))  # without current file
+    funkcje=[] #Tomek
+    t_funkcje=[]
+    #node'y
+    for plik in files_to_parse:
+        fs = get_function_names(path+"/"+plik)
+        funkcje += fs
+        t_funkcje = fs
+        for name in t_funkcje:
