@@ -124,6 +124,20 @@ def count_method(path, names, othernames): #Dominik
     t = 0
     str = 'def ' + names
     f = open(path,"r")
-   
+    for x in f: #Tomek
+        if t == 1:
+            if 'def ' in x:
+                t = 0
+                f.close()
+                return count
+            if othernames in x:
+                count=count+1
+        elif str in x:
+            t = 1
+    f.close()
+    return count   
+
 g = createGraphFunctions()  #Patryk
 drawGraph_func(g)
+
+# #### Historyjka nr 3 ###########################
