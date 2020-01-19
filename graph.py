@@ -72,3 +72,8 @@ def drawGraph_func(graph): #Dominik
     nx.draw_networkx_edge_labels(g, pos=pos, edge_labels = edge_labels) 
 
     plt.show() 
+
+def createGraphFunctions(path="./HIS_II/"): #Tomek, Kamil, Wiktor, Szymon, Patryk
+    g = nx.DiGraph()  # create direct graph #Wiktor
+    files_to_parse = rtrn_python_files(path)
+    #files_to_parse.pop(files_to_parse.index(current_file_name))  # without current file
