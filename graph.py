@@ -59,3 +59,5 @@ g = createGraph()
 drawGraph(g)
 
 # #### Historyjka nr2 ###########################
+def rtrn_python_files(path): #zwraca listę plików .py 
+    return list(filter(lambda f: f.endswith(".py"), listdir(path)))
