@@ -109,3 +109,9 @@ def get_function_names(path): #function names from file. Tomek
                names.append(n)
    print(names)
    return names
+
+def count_call_1(path, func_name): #Tomek
+    pattern = re.compile(r'{}\(\)[^:]'.format(func_name))
+    with open(path, 'r') as f:
+        calls = re.findall(pattern, f.read())
+        return len(calls)
