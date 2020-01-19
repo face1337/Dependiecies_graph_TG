@@ -124,3 +124,6 @@ def count_method(path, names, othernames): #Dominik
     t = 0
     str = 'def ' + names
     f = open(path,"r")
+   
+g = createGraphFunctions()  #Patryk
+drawGraph_func(g)
