@@ -87,7 +87,13 @@ def createGraphFunctions(path="./HIS_II/"):
         for name in t_funkcje:
             g.add_node(get_node_name(path+"/"+plik,name))
 
-            
+  #edge#
+    for plik in files_to_parse: 
+        for name in funkcje:
+            for othername in funkcje:
+                if name == othername:
+                    continue
+
 def get_function_names(path): #function names from file. Tomek
    names = []
    with open(path, 'r') as fr:
