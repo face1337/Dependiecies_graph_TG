@@ -164,3 +164,13 @@ def createGraphFunctions(path="./HIS_III/"): #Wiktor, Kamil, Tomek
             if "__init__.py" in listdir(path+"/"+file_+"/"):  # sprawdzamy czy jest modulem
                 module_list.append(file_)
                 
+
+def get_function_names(path): #function names from file - Tomek
+    names = []
+    with open(path, 'r') as fr:
+        for line in fr:
+            if re.match(r"^\s*?def", line):
+                n = line.split(" ")[1].split("(")[0] 
+                names.append(n)
+    print(names)
+    return names              
