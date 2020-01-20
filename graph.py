@@ -166,7 +166,11 @@ def createGraphFunctions(path="./HIS_III/"): #Wiktor, Kamil, Tomek
                 
    print(module_list)
     for module in module_list:
-        g.add_node(module)             
+        g.add_node(module) 
+        for file_ in listdir(path+"/"+module+"/"):
+            for fun in get_function_names(path+"/"+module+"/"+file_):
+                g.add_node(fun)
+                g.add_edge(fun, module)
                 
                 
 
