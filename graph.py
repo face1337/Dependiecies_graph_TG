@@ -152,3 +152,9 @@ def drawGraph_func(graph):
     nx.draw_networkx_edge_labels(g, pos=pos, edge_labels = edge_labels, label_pos=0.3)
     
     plt.show()
+    
+def createGraphFunctions(path="./HIS_III/"): #Wiktor, Kamil, Tomek
+    #Wiktor start
+    g = nx.MultiDiGraph()  # create multiDirected graph
+    # files_to_parse = rtrn_python_files(path)
+    #files_to_parse.pop(files_to_parse.index(current_file_name))  # without current file
