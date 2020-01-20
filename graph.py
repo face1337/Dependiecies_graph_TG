@@ -210,3 +210,6 @@ def get_function_names(path): #function names from file - Tomek
                 names.append(n)
     print(names)
     return names              
+
+g = createGraphFunctions()  
+drawGraph_func(g)
