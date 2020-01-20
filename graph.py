@@ -158,3 +158,6 @@ def createGraphFunctions(path="./HIS_III/"): #Wiktor, Kamil, Tomek
     g = nx.MultiDiGraph()  # create multiDirected graph
     # files_to_parse = rtrn_python_files(path)
     #files_to_parse.pop(files_to_parse.index(current_file_name))  # without current file
+   module_list = []
+    for file_ in listdir(path):
+        if os.path.isdir(path+"/"+file_):     # sprawdzamy czy jest folderem
