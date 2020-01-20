@@ -153,6 +153,12 @@ def drawGraph_func(graph):
     
     plt.show()
     
+def count_call_1(path, func_name): #Tomek - zliczanie wywołań funckji
+    pattern = re.compile(r'{}\(\)[^:]'.format(func_name))
+    with open(path, 'r') as f:
+        calls = re.findall(pattern, f.read())
+        return len(calls)
+    
 def createGraphFunctions(path="./HIS_III/"): #Wiktor, Kamil, Tomek
 
     g = nx.MultiDiGraph()  # create multiDirected graph
