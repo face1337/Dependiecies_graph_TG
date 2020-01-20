@@ -143,3 +143,6 @@ drawGraph_func(g)
 # #### Historyjka nr 3 ###########################
 def rtrn_python_files(path): #zwraca listę plików .py
     return list(filter(lambda f: f.endswith(".py"), listdir(path))) 
+
+def drawGraph_func(graph):
+    edge_labels = nx.get_edge_attributes(g, "weight") 
