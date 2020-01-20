@@ -161,3 +161,6 @@ def createGraphFunctions(path="./HIS_III/"): #Wiktor, Kamil, Tomek
    module_list = []
     for file_ in listdir(path):
         if os.path.isdir(path+"/"+file_):     # sprawdzamy czy jest folderem
+            if "__init__.py" in listdir(path+"/"+file_+"/"):  # sprawdzamy czy jest modulem
+                module_list.append(file_)
+                
