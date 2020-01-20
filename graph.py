@@ -178,7 +178,19 @@ def createGraphFunctions(path="./HIS_III/"): #Wiktor, Kamil, Tomek
                 g.add_node(fun)
                 g.add_edge(fun, module)
                 
-                
+     for module_1 in module_list:
+         for module_2 in module_list:
+            if module_1 == module_2:
+                continue
+            count = 0
+            for file_ in listdir(path+"/"+module_1+"/"):
+                functions_in_module_1 = get_function_names(path+"/"+module_1+"/"+file_)
+                for fun in functions_in_module_1:
+                    for plik in rtrn_python_files(path+module_2+"/"):
+                        count += count_call_1(path+"/"+module_2+"/"+plik, fun)
+            g.add_edge(module_1, module_2, weight=count, label=module_1+module)
+    return g
+             
 
 def get_function_names(path): #function names from file - Tomek
     names = []
