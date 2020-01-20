@@ -178,8 +178,8 @@ def createGraphFunctions(path="./HIS_III/"): #Wiktor, Kamil, Tomek
                 g.add_node(fun)
                 g.add_edge(fun, module)
                 
-     for module_1 in module_list:
-         for module_2 in module_list:
+    for module_1 in module_list:
+        for module_2 in module_list:
             if module_1 == module_2:
                 continue
             count = 0
