@@ -154,17 +154,17 @@ def drawGraph_func(graph):
     plt.show()
     
 def createGraphFunctions(path="./HIS_III/"): #Wiktor, Kamil, Tomek
-    #Wiktor start
+
     g = nx.MultiDiGraph()  # create multiDirected graph
     # files_to_parse = rtrn_python_files(path)
     #files_to_parse.pop(files_to_parse.index(current_file_name))  # without current file
-   module_list = []
+    module_list = []
     for file_ in listdir(path):
         if os.path.isdir(path+"/"+file_):     # sprawdzamy czy jest folderem
             if "__init__.py" in listdir(path+"/"+file_+"/"):  # sprawdzamy czy jest modulem
                 module_list.append(file_)
                 
-   print(module_list)
+    print(module_list)
     for module in module_list:
         g.add_node(module) 
         for file_ in listdir(path+"/"+module+"/"):
