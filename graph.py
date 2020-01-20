@@ -146,6 +146,15 @@ def rtrn_python_files(path): #zwraca listę plików .py
 
 def drawGraph_func(graph):
     edge_labels = nx.get_edge_attributes(g, "weight") 
+    
+    l = [] 
+    for u,v,d in g.edges(data=True): 
+        if "weight" not in d: 
+            l.append(((u,v), '')) 
+        else: 
+            l.append(((u,v), d['weight']))
+    edge_labels = dict(l)
+    
     pos = nx.spring_layout(g)
 
     nx.draw(graph,pos=pos, with_labels=True, font_weight='bold')
