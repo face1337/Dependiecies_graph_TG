@@ -164,6 +164,11 @@ def createGraphFunctions(path="./HIS_III/"): #Wiktor, Kamil, Tomek
             if "__init__.py" in listdir(path+"/"+file_+"/"):  # sprawdzamy czy jest modulem
                 module_list.append(file_)
                 
+   print(module_list)
+    for module in module_list:
+        g.add_node(module)             
+                
+                
 
 def get_function_names(path): #function names from file - Tomek
     names = []
