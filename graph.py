@@ -10,6 +10,7 @@ import re
 
 current_file_name = sys.argv[0].split('/')[-1]  #return current file name
 
+"""
 # ######## Historyjka 1. #########
 def extract_filename(file): 
     return file.split(".")[0]  
@@ -57,7 +58,8 @@ def drawGraph(graph):  #Dominik
 
 g = createGraph()
 drawGraph(g)
-
+"""
+"""
 # #### Historyjka nr2 ###########################
 def rtrn_python_files(path): #zwraca listę plików .py 
     return list(filter(lambda f: f.endswith(".py"), listdir(path)))
@@ -139,7 +141,7 @@ def count_method(path, names, othernames): #Dominik
 
 g = createGraphFunctions()  #Patryk
 drawGraph_func(g)
-
+"""
 # #### Historyjka nr 3 ###########################
 def rtrn_python_files(path): #zwraca listę plików .py
     return list(filter(lambda f: f.endswith(".py"), listdir(path))) 
